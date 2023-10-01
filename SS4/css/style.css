@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  outline: none;
+  border: none;
+}
+
+.input-wrapper input {
+  border: 1px solid #dbdbdb;
+  padding: 10px 15px;
+  width: 100%;
+
+}
+
+.input-wrapper {
+  margin-bottom: 10px;
+}
+
+
+.btn {
+  padding: 8px 20px;
+  background-color: #037bfe;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.header {
+  height: 64px;
+  background-color: #037bfe;
+  line-height: 64px;
+  text-align: center;
+  font-size: 30px;
+}
