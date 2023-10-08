@@ -2,8 +2,8 @@
 const init = () => {
   console.log("Windows Loaded");
 
-  view.setActiveScreen("registerScreen")
+  view.setActiveScreen("registerScreen");
 
 }
 
-window.onload = init
+window.onload = init;
