@@ -1,0 +1,45 @@
+.login-container {
+  height: 100vh;
+  background-image: url(https://media.azpm.org/master/image/2019/10/4/hero/computers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.login-container .aside-right {
+  width: 28%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.login-container .aside-right .header h3 {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 200;
+}
+
+.login-container .aside-right .input-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.login-container .input-name-wrapper .input-wrapper {
+  width: 48%;
+}
+
+#login-form {
+  padding: 20px;
+}
+
+.login-container .aside-right .form-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

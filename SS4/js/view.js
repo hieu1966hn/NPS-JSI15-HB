@@ -16,6 +16,10 @@ view.setActiveScreen = (screenName) => {
     case `loginScreen`:
       document.getElementById("app").innerHTML = components.loginScreen;
 
+      document.getElementById("redirect-to-register").addEventListener("click", () => {
+        view.setActiveScreen("registerScreen");
+      });
+
       break;
   }
 }
