@@ -2,7 +2,19 @@
 const init = () => {
   console.log("Windows Loaded");
 
-  view.setActiveScreen("registerScreen");
+  const firebaseConfig = {
+    apiKey: "AIzaSyBlYJqAhR0ZImsxumpDN6_BVg1MCqpgsHc",
+    authDomain: "nps-jsi15-hb.firebaseapp.com",
+    projectId: "nps-jsi15-hb",
+    storageBucket: "nps-jsi15-hb.appspot.com",
+    messagingSenderId: "684179451794",
+    appId: "1:684179451794:web:3dbb867d1b8ec958c3db4b",
+    measurementId: "G-882YF1EDGQ"
+  };
+
+  // let app = initializeApp(firebaseConfig);
+  // console.log(app().name);
+  // view.setActiveScreen("registerScreen");
 
 }
 
