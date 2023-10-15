@@ -85,3 +85,8 @@ components.loginScreen = `
     </div>
   </div>
 `;
+
+
+components.homeScreen = `
+<h1>Hello World!!</h1>
+`

@@ -27,3 +27,34 @@ model.register = async (data) => {
   }
 
 }
+
+
+model.login = async (dataLogin) => {
+  try {
+    const response = await firebase.auth().signInWithEmailAndPassword(dataLogin.email, dataLogin.password);
+
+    if (response.user.emailVerified == false) {
+      alert("Please Verified your email");
+    }
+    else {
+      model.currentUser = {
+        displayName: response.user.displayName,
+        email: response.user.email
+      }
+
+      // Đi vào màn hình trang chủ khi đã đăng nhập thành công
+      view.setActiveScreen("homeScreen");
+    }
+
+  }
+  catch (err) {
+    console.log(err);
+    if (err.code == `auth/user-not-found` || err.code == "auth/invalid-email") {
+      document.getElementById("email-error").innerText = `${err.message}`;
+    }
+    else if (err.code = "auth/wrong-password") {
+      document.getElementById("password-error").innerText = `${err.message}`;
+    }
+
+  }
+}
