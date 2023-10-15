@@ -50,5 +50,12 @@ view.setActiveScreen = (screenName) => {
       })
 
       break;
+
+    case `homeScreen`:
+      document.getElementById("app").innerHTML = components.homeScreen;
+      break;
+
   }
+
+
 }
