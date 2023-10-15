@@ -14,7 +14,10 @@ const init = () => {
 
   // let app = initializeApp(firebaseConfig);
   // console.log(app().name);
-  // view.setActiveScreen("registerScreen");
+
+  firebase.initializeApp(firebaseConfig);
+
+  view.setActiveScreen("registerScreen");
 
 }
 

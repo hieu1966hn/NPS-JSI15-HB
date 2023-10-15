@@ -70,3 +70,27 @@ controller.register = (data) => {
     model.register(data);
   }
 }
+
+
+controller.login = (dataLogin) => {
+  if (dataLogin.email === "") {
+    document.getElementById("email-error").innerText = "*Please input email";
+  }
+  else {
+    document.getElementById("email-error").innerText = "";
+  }
+
+  if (dataLogin.password === "") {
+    document.getElementById("password-error").innerText = "*Please input password";
+  }
+  else {
+    document.getElementById("password-error").innerText = "";
+  }
+
+  if (dataLogin.email !== "" && dataLogin.password !== "") {
+    model.login(dataLogin);
+  }
+
+}
+
+

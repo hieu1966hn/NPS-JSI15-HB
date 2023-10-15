@@ -4,8 +4,6 @@ view.setActiveScreen = (screenName) => {
   switch (screenName) {
     case `registerScreen`:
       document.getElementById("app").innerHTML = components.registerScreen;
-
-
       document.getElementById("redirect-to-login").addEventListener("click", () => {
         view.setActiveScreen("loginScreen");
       });
@@ -28,13 +26,6 @@ view.setActiveScreen = (screenName) => {
         controller.register(data);
 
       })
-
-
-
-
-
-
-
       break;
 
     case `loginScreen`:
@@ -43,6 +34,20 @@ view.setActiveScreen = (screenName) => {
       document.getElementById("redirect-to-register").addEventListener("click", () => {
         view.setActiveScreen("registerScreen");
       });
+
+      const loginForm = document.getElementById("login-form");
+      loginForm.addEventListener("submit", (event) => {
+        // Ngăn sự kiện reload mặc định của trình duyệt
+        event.preventDefault();
+
+        const data = {
+          email: loginForm.email.value.trim(),
+          password: loginForm.password.value.trim()
+        }
+        console.log(data);
+
+        controller.login(data);
+      })
 
       break;
   }
